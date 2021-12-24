@@ -114,14 +114,14 @@ puts("");
 printf("%s       /'._        \t%scpu: \t%s%s", COLOR_CAT ,COLOR_PRIMARY, COLOR_SECONDARY ,cpu());
 printf("%s      (° o 7       \t%suptime: %s%s\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, uptime());
 printf("%s       |'-'\"~.  ,  \t%sdistro: %s%s", COLOR_CAT,COLOR_PRIMARY, COLOR_SECONDARY, distro());
-printf("%s       Uu^~(_J._.\" \t%swm: \t%s%s\n\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, wm());
+printf("%s       Uu^~(_J._.\" \t%swm: \t%s%s%s\n\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, wm(), COLOR_DEFAULT);
 }
 else if(USE_FONTAWESOME_ICONS == true) {
 puts("");
 printf("%s      /'._        \t%s\uf2db  %s%s", COLOR_CAT ,COLOR_PRIMARY, COLOR_SECONDARY ,cpu());
 printf("%s     (° o 7       \t%s\uf017  %s%s\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, uptime());
 printf("%s      |'-'\"~.  ,  \t%s\uf085  %s%s", COLOR_CAT,COLOR_PRIMARY, COLOR_SECONDARY, distro());
-printf("%s      Uu^~(_J._.\" \t%s\uf2d2  %s%s\n\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, wm());
+printf("%s      Uu^~(_J._.\" \t%s\uf2d2  %s%s%s\n\n",COLOR_CAT ,COLOR_PRIMARY , COLOR_SECONDARY, wm(), COLOR_DEFAULT);
 }
 else {
     printf("[ERROR]: You forgot to specify if USE_FONTAWESOME_ICONS was %strue %sor %sfalse %s", COLOR_LIGHT_GREEN, COLOR_DEFAULT, COLOR_RED, COLOR_DEFAULT);
