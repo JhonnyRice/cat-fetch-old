@@ -137,13 +137,18 @@ char* get_color(char* name) {
     }else if(!(strcmp(name, "white"))) {
         return COLOR_WHITE;
     }else {
-        printf("invalid color: %s", name);
-        exit(1);
+        printf("WARNING: invalid color: %s\n", name);
+        return COLOR_DEFAULT; //when the color is invalid give a warning and give a default color as a fallback 
     }
 }
 
 Config* get_config(ParsedElement* elements, size_t length) {
     Config* cfg = malloc(sizeof(Config));
+    //if config doesnt have this fields then we're going to give 'em a fallback value (default)
+    cfg->primary_color = COLOR_CYAN; 
+    cfg->secondary_color = COLOR_LIGHT_YELLOW;
+    cfg->cat_color, COLOR_BLUE;
+    cfg->awesome_icons = false;
     for(int i = 0; i < length; i++) {
         ParsedElement element = elements[i];
         //lets pretend switch doesnt exist
