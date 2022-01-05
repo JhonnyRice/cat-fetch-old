@@ -93,6 +93,7 @@ int main(int argc, char** argv) {
         printf("%s      (° o 7       \t%suptime: %s%s\n",cfg->cat_color ,cfg->primary_color, cfg->secondary_color, uptime_fetch);
         printf("%s       |'-'\"~.  ,  \t%sdistro: %s%s", cfg->cat_color ,cfg->primary_color, cfg->secondary_color, distro_fetch);
         printf("%s       Uu^~(_J._.\" \t%swm: \t%s%s\n\n",cfg->cat_color ,cfg->primary_color, cfg->secondary_color, wm_fetch);
+	printf("\x1b[0m");
     }
     else {
         puts("");
@@ -100,6 +101,7 @@ int main(int argc, char** argv) {
         printf("%s     (° o 7       \t%s\uf017  %s%s\n",cfg->cat_color ,cfg->primary_color, cfg->secondary_color, uptime_fetch);
         printf("%s      |'-'\"~.  ,  \t%s\uf085  %s%s", cfg->cat_color ,cfg->primary_color, cfg->secondary_color, distro_fetch);
         printf("%s      Uu^~(_J._.\" \t%s\uf2d2  %s%s\n\n",cfg->cat_color ,cfg->primary_color, cfg->secondary_color, wm_fetch);
+	printf("\x1b[0m");
     }
     free(cpu_fetch);
     free(uptime_fetch);
